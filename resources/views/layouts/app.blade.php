@@ -16,7 +16,6 @@
         @include('commons.navbar')
         
         <div class="container">
-        <div class="row  col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-offset-8 col-lg-offset-3 col-lg-6">
         </div>
 
             @include('commons.error_tasks')

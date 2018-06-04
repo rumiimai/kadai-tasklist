@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <th>ステータス</th>
-            <td>{{ $task->staus }}</td>
+            <td>{{ $task->status }}</td>
         </tr>
         <tr>
             <th>メッセージ</th>

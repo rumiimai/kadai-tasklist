@@ -23,6 +23,15 @@ class TasksController extends Controller
             'tasks' => $tasks,
         ]);
     }
+    
+    public function welcome()
+    {
+        $tasks = Task::all();
+
+        return view('welcome', [
+            'tasks' => $tasks,
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.

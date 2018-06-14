@@ -42,10 +42,13 @@ class TasksController extends Controller
     public function create()
     {
         $task = new Task;
-
-        return view('tasks.create', [
-            'task' => $task,
+         if (\Auth::user()) {
+            return view('tasks.create',[
+                'task' => $task,
         ]);
+        }else {
+          return redirect('/');
+        }
     }
     /**
      * Store a newly created resource in storage.
@@ -83,7 +86,9 @@ class TasksController extends Controller
         return view('tasks.show', [
             'task' => $task,
         ]);
-       }
+       }else {
+          return redirect('/');
+        }
     }
 
     /**
@@ -99,6 +104,8 @@ class TasksController extends Controller
             return view('tasks.edit',[
                 'task' => $task,
         ]);
+        }else {
+          return redirect('/');
         }
     }
 
